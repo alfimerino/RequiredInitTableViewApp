@@ -8,9 +8,24 @@
 
 import UIKit
 
+// create a class, called ModelController
+// declare an array of ints (declared is not the same thing as initialize)
+// create a required init:  required init?(dataSource: [Int] = []) {
+//      code
+//   }
+
+// create 2 functions:
+// numberOfElements that returns an int (size of dataSource)
+// number(at:) that returns the element at that index
+// ----------
+// THEN
+//go to ViewController and create an instance of the modelcontroller but the same way as you declared the array of ints in the model controller (required init)
+
+// finish tableview imlpementation
+
 class ViewController: UIViewController {
-    var ints = [1, 2, 3]
-    override var title: String? = "Williams"
+    
+  
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         
@@ -20,6 +35,11 @@ class ViewController: UIViewController {
         tableView.register(TableViewCell.self, forCellReuseIdentifier: "TableViewCell")
     return tableView
     }()
+    
+//    required init?(dataSource: [Int] = []) {
+//
+//    }
+//    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +57,11 @@ class ViewController: UIViewController {
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
+    
+//    func numberOfElements() -> Int {
+//        
+//        return UITableViewDataSource.count
+//    }
 }
 
 //sextension ViewController: view
