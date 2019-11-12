@@ -17,9 +17,8 @@ import UIKit
 class ModelController {
     var dataSource: [Int]
     
-    required init?(dataSource: [Int]) {
+    required init(dataSource: [Int]) {
         self.dataSource = dataSource
-
     }
     
     func numberOfElements() -> Int {
